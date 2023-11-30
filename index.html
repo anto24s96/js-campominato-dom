@@ -13,11 +13,19 @@
     <!-- HEADER -->
     <header class="d-flex align-items-center">
         <div class="container_logo_button d-flex align-items-center justify-content-between px-4">
+            <!-- LOGO + TITOLO -->
             <div class="logo_title d-flex align align-items-center">
                 <img src="./img/mobile-logo.png" alt="logo-boolean" id="logo">
                 <span class="fs-1 fw-bolder">Campo Minato</span>
             </div>
-            <div class="container_play-button">
+            <!-- LIVELLO E PULSANTE PLAY -->
+            <div class="container_play-button d-flex">
+                <select name="difficulty" id="difficulty" class="form-select form-select-sm me-3 border-3 border-black bg-warning fw-bolder rounded-2">
+                    <option value="">SELECT LEVEL</option>
+                    <option value="1">Easy</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Hard</option>
+                </select>
                 <button type="button" class="btn btn-warning px-5 fw-bolder border-3 border-black" id="play">PLAY</button>
             </div>
         </div>
