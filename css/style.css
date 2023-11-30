@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(7, 0, 199);
+}
+
+/* HEADER */
+header{
+    height: 100px;
+    background-color: white;
+}
+
+.container_logo_button{
+    width: 100%;
+}
+
+#logo{
+    width: 80px;
+}
+
+/* MAIN */
+#grid{
+    width: 1000px;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicked{
+    background-color: rgb(0, 140, 255);
+}
