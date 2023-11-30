@@ -40,3 +40,7 @@ header{
 .clicked{
     background-color: rgb(0, 140, 255);
 }
+
+.clicked-bomb{
+    background-color: brown;
+}
