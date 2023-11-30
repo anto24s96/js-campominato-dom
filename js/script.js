@@ -37,6 +37,8 @@ function createNewgame() {
 
   const bombs = bombGenerator(NUMBER_OF_BOMBS, cells_number);
 
+  let gameOver = false;
+
   //CREO UNA FUNZIONE PER DETERMINARE LA CELLA
   function createdCell(numbers, cellsPerRow) {
     const element = document.createElement("div");
@@ -58,15 +60,18 @@ function createNewgame() {
 
     //AGGIUNGO AI QUADRATI UNA FUNZIONE DI "CLICK"
     square.addEventListener("click", function () {
-      // VERIFICA DELLA CASELLA CON E SENZA BOMBA
-      if (!bombs.includes(i)) {
-        this.classList.add("clicked");
-        points++;
-
-        document.getElementById("score").innerText = `YOUR SCORE: ${points}`;
-      }      
-      else {
-        this.classList.add("clicked-bomb");
+      // VERIFICO SE IL GIOCO TERMINA
+      if(!gameOver){
+        if (!bombs.includes(i)) {
+          this.classList.add("clicked");
+          points++;
+  
+          document.getElementById("score").innerText = `YOUR SCORE: ${points}`;
+        }      
+        else {
+          this.classList.add("clicked-bomb");
+          gameOver = true;
+        }
       }
     });
 
